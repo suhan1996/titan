@@ -40,6 +40,12 @@ DEFAULT: '8px',
 h1, h2, h3, h4 { font-family: 'Georgia', serif; }
 body { font-family: 'Arial', sans-serif; }
 .calendly-inline-widget { height: 700px; }
+iframe[src*="calendly"] { background-color: #111827 !important; }
+.calendly-inline-widget iframe {
+background-color: #111827 !important;
+color-scheme: dark !important;
+filter: invert(0) !important;
+}
 </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -64,14 +70,14 @@ body { font-family: 'Arial', sans-serif; }
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 <div class="grid md:grid-cols-2 gap-12 items-center">
 <div class="text-left">
-<h1 class="text-5xl font-bold text-white mb-6">Turn Your Top Performers into Scalable AI Agents</h1>
-<p class="text-xl text-gray-300 mb-8">10X your business with AI agents that learn from your top performers in each business line and scale their success enterprise-wide</p>
+<h1 class="text-5xl font-bold text-white mb-6">World's First CPQ AI Agents</h1>
+<p class="text-xl text-gray-300 mb-8">Titan AI helps sales-driven enterprises automate and optimize sales operations by integrating CPQ AI agents with built-in dynamic pricing intelligence</p>
 <div class="flex gap-4">
 <a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="bg-primary text-white px-8 py-3 !rounded-button text-lg font-medium border-2 border-primary hover:bg-white hover:text-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-primary/50">Schedule Demo</a>
 </div>
 </div>
 <div class="bg-gray-800 p-8 rounded-lg shadow-xl">
-<div class="calendly-inline-widget" data-url="https://calendly.com/levy-titanaiagents/30min?back=1&background_color=1f2937&text_color=ffffff&primary_color=2878e5"></div>
+<div class="calendly-inline-widget" data-url="https://calendly.com/levy-titanaiagents/30min?back=1&background_color=111827&text_color=ffffff&primary_color=2878e5&hide_gdpr=1&hide_landing_page_details=1&theme=dark"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </div>
 </div>
@@ -95,6 +101,95 @@ body { font-family: 'Arial', sans-serif; }
 </div>
 <h3 class="text-xl font-semibold mb-4 text-white">Industry Expertise</h3>
 <p class="text-gray-300">Ex-MBB consultants with in-depth industry knowledge and AI transformation experiences with 10+ Global F500 companies</p>
+</div>
+</div>
+</div>
+<div class="mb-16">
+<h2 class="text-3xl font-bold text-center mb-8">Common Challenges We Solve</h2>
+<div class="bg-gray-800/50 backdrop-blur-sm p-12 rounded-2xl shadow-2xl">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
+<div class="relative mb-6">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">01</span>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4 text-white">Configuration is slow and error-prone</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>Sift through thousands of SKUs in spreadsheets</span>
+</li>
+<li class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>Misconfiguring components, missing required parts</span>
+</li>
+<li class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>Misapplying bundling and discounts</span>
+</li>
+</ul>
+<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
+<p class="text-sm text-gray-400">Causing delays, rework, and constant engineering intervention</p>
+</div>
+</div>
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
+<div class="relative mb-6">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">02</span>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4 text-white">Pricing decisions are suboptimal</h3>
+<div class="space-y-3">
+<p class="text-gray-300">Reps rely on intuition or last-deal pricing, with:</p>
+<div class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>No visibility into upsell opportunities, customer segmentation, margin targets, cost drivers, or discount programs</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
+<p class="text-sm text-gray-400">Leading to inconsistent pricing, over-discounts, and 5-10% margin leakage</p>
+</div>
+</div>
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
+<div class="relative mb-6">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">03</span>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4 text-white">Manual quote generation</h3>
+<div class="space-y-3">
+<p class="text-gray-300">Generating a quote takes hours due to:</p>
+<div class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>Manual copy-pasting, constant revision, and lack of consistent standards</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
+<p class="text-sm text-gray-400">Result in delayed response times, frequent errors, and lost sales opportunities</p>
+</div>
+</div>
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
+<div class="relative mb-6">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">04</span>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4 text-white">Disconnected systems</h3>
+<div class="space-y-3">
+<div class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>Frequent disconnects between traditional CPQ and CRM/ERP systems</span>
+</div>
+<div class="flex items-start gap-2 text-gray-300">
+<i class="ri-error-warning-line text-primary mt-1"></i>
+<span>Inefficient email-based deal approval flow</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
+<p class="text-sm text-gray-400">Poor deal data that undermines analysis and low-margin deals slip through</p>
+</div>
+</div>
 </div>
 </div>
 </div>
