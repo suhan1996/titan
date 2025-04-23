@@ -39,12 +39,15 @@ DEFAULT: '8px',
 :where([class^="ri-"])::before { content: "\f3c2"; }
 h1, h2, h3, h4 { font-family: 'Georgia', serif; }
 body { font-family: 'Arial', sans-serif; }
-.calendly-inline-widget { height: 700px; }
+.calendly-inline-widget { height: 500px; }
+@media (min-width: 768px) {
+  .calendly-inline-widget { height: 700px; }
+}
 iframe[src*="calendly"] { background-color: #111827 !important; }
 .calendly-inline-widget iframe {
-background-color: #111827 !important;
-color-scheme: dark !important;
-filter: invert(0) !important;
+  background-color: #111827 !important;
+  color-scheme: dark !important;
+  filter: invert(0) !important;
 }
 </style>
 </head>
@@ -61,6 +64,17 @@ filter: invert(0) !important;
 <a href="#booking" class="text-gray-300 hover:text-primary">Calculate ROI</a>
 <a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90">Schedule Demo</a>
 </div>
+<button class="md:hidden flex items-center" onclick="toggleMobileMenu()">
+<i class="ri-menu-line text-2xl text-gray-300"></i>
+</button>
+</div>
+<div id="mobileMenu" class="hidden md:hidden">
+<div class="py-4 space-y-4">
+<a href="#features" class="block text-gray-300 hover:text-primary">Features</a>
+<a href="#security" class="block text-gray-300 hover:text-primary">Security</a>
+<a href="#booking" class="block text-gray-300 hover:text-primary">Calculate ROI</a>
+<a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="block bg-primary text-white px-6 py-2 !rounded-button text-center whitespace-nowrap hover:bg-primary/90">Schedule Demo</a>
+</div>
 </div>
 </div>
 </nav>
@@ -70,13 +84,13 @@ filter: invert(0) !important;
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 <div class="grid md:grid-cols-2 gap-12 items-center">
 <div class="text-left">
-<h1 class="text-5xl font-bold text-white mb-6">World's First CPQ AI Agents</h1>
-<p class="text-xl text-gray-300 mb-8">Titan AI helps sales-driven enterprises automate and optimize sales operations by integrating CPQ AI agents with built-in dynamic pricing intelligence</p>
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">World's First CPQ AI Agents</h1>
+<p class="text-lg md:text-xl text-gray-300 mb-8">Titan AI helps sales-driven enterprises automate and optimize sales operations by integrating CPQ AI agents with built-in dynamic pricing intelligence</p>
 <div class="flex gap-4">
-<a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="bg-primary text-white px-8 py-3 !rounded-button text-lg font-medium border-2 border-primary hover:bg-white hover:text-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-primary/50">Schedule Demo</a>
+<a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="w-full md:w-auto bg-primary text-white px-8 py-3 !rounded-button text-lg font-medium border-2 border-primary hover:bg-white hover:text-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-primary/50 text-center">Schedule Demo</a>
 </div>
 </div>
-<div class="bg-gray-800 p-8 rounded-lg shadow-xl">
+<div class="bg-gray-800 p-4 md:p-8 rounded-lg shadow-xl">
 <div class="calendly-inline-widget" data-url="https://calendly.com/levy-titanaiagents/30min?back=1&background_color=111827&text_color=ffffff&primary_color=2878e5&hide_gdpr=1&hide_landing_page_details=1&theme=dark"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </div>
@@ -376,7 +390,7 @@ filter: invert(0) !important;
 </div>
 </div>
 <h2 class="text-3xl font-bold text-center mb-16">Our Targeted Use Cases</h2>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
 <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
 <i class="ri-percent-line text-primary text-2xl"></i>
@@ -485,7 +499,7 @@ filter: invert(0) !important;
 </div>
 <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
 <h3 class="text-xl font-semibold mb-6 text-white">Trusted by Industry Leaders</h3>
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="flex items-center justify-center p-4 bg-gray-700 rounded">
 <span class="text-gray-300 font-semibold">Fortune 500</span>
 </div>
@@ -506,7 +520,7 @@ filter: invert(0) !important;
 </main>
 <footer class="bg-gradient-to-br from-[rgb(40,120,229,0.1)] to-gray-900 text-gray-300 py-12">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-4 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
 <div>
 <img src="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/a46c2fc381d6a6977a64035f5fd00b4e.png" alt="Titan AI Logo" class="h-8 mb-4">
 <p class="text-gray-300">Transforming enterprises with secure, private AI solutions</p>
@@ -544,19 +558,23 @@ filter: invert(0) !important;
 </div>
 </footer>
 <script>
-function toggleContent(id) {
-const content = document.getElementById(`content-${id}`);
-if (content.classList.contains('hidden')) {
-content.classList.remove('hidden');
-setTimeout(() => {
-content.classList.remove('opacity-0');
-}, 50);
-} else {
-content.classList.add('opacity-0');
-setTimeout(() => {
-content.classList.add('hidden');
-}, 300);
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.toggle('hidden');
 }
+function toggleContent(id) {
+  const content = document.getElementById(`content-${id}`);
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    setTimeout(() => {
+      content.classList.remove('opacity-0');
+    }, 50);
+  } else {
+    content.classList.add('opacity-0');
+    setTimeout(() => {
+      content.classList.add('hidden');
+    }, 300);
+  }
 }
 function calculateROI() {
 const employees = document.getElementById('employees').value || 0;
