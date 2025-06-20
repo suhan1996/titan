@@ -3,17 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/5b9ccf37e789696f2baba63c821addcb.png">
-<link rel="icon" type="image/png" href="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/5b9ccf37e789696f2baba63c821addcb.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Turn Your Top Performers into Scalable AI Agents - #1 Enterprise AI Solution</title>
+<title>Titan AI - #1 Dynamic AI Pricing Solution</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
 theme: {
 extend: {
 colors: {
-primary: 'rgb(40, 120, 229)',
-secondary: 'rgb(40, 120, 229)'
+primary: '#069edd', // 主蓝色
+secondary: '#052561', // 次蓝色，可以和primary一致
+third: "#052561",
+// 为流程图未选中状态添加一个更浅的蓝色，使其与背景形成对比
+flowchartTextInactive: '#069edd', // 例如，一个更亮的蓝色
+// 新增的后果强调色
+consequenceRed: '#45d1fa', // 番茄红，表示警告或损失
 },
 borderRadius: {
 'none': '0px',
@@ -36,33 +40,33 @@ DEFAULT: '8px',
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 <style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-h1, h2, h3, h4 { font-family: 'Georgia', serif; }
+/* 这里移除了 :where([class^="ri-"])::before { content: "\f3c2"; } 因为它会覆盖所有Remixicon图标的默认内容 */
+h1, h2, h3, h4 { font-family: 'Arial', serif; }
 body { font-family: 'Arial', sans-serif; }
 .calendly-inline-widget { height: 500px; }
 @media (min-width: 768px) {
   .calendly-inline-widget { height: 700px; }
 }
-iframe[src*="calendly"] { background-color: #111827 !important; }
+/* 移除了 iframe[src*="calendly"] 的背景色，让它由JS控制暗色模式，如果需要保持则不删 */
+/* iframe[src*="calendly"] { background-color: #111827 !important; } */
 .calendly-inline-widget iframe {
   background-color: #111827 !important;
   color-scheme: dark !important;
   filter: invert(0) !important;
 }
+
+
 </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
-<nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-700">
+<body class="text-gray-900 text-gray-100">
+<nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-700">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16">
 <div class="flex items-center">
 <img src="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/a46c2fc381d6a6977a64035f5fd00b4e.png" alt="Titan AI Logo" class="h-8">
 </div>
 <div class="hidden md:flex items-center space-x-8">
-<a href="#features" class="text-gray-300 hover:text-primary">Features</a>
-<a href="#security" class="text-gray-300 hover:text-primary">Security</a>
-<a href="#booking" class="text-gray-300 hover:text-primary">Calculate ROI</a>
-<a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90">Schedule Demo</a>
+<a href="https://calendly.com/fj544/sales-kick-off" target="_blank" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90">Schedule Demo</a>
 </div>
 <button class="md:hidden flex items-center" onclick="toggleMobileMenu()">
 <i class="ri-menu-line text-2xl text-gray-300"></i>
@@ -70,531 +74,1368 @@ iframe[src*="calendly"] { background-color: #111827 !important; }
 </div>
 <div id="mobileMenu" class="hidden md:hidden">
 <div class="py-4 space-y-4">
-<a href="#features" class="block text-gray-300 hover:text-primary">Features</a>
-<a href="#security" class="block text-gray-300 hover:text-primary">Security</a>
-<a href="#booking" class="block text-gray-300 hover:text-primary">Calculate ROI</a>
-<a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="block bg-primary text-white px-6 py-2 !rounded-button text-center whitespace-nowrap hover:bg-primary/90">Schedule Demo</a>
+<a href="https://calendly.com/fj544/sales-kick-off" target="_blank" class="block bg-primary text-white px-6 py-2 !rounded-button text-center whitespace-nowrap hover:bg-primary/90">Schedule Demo</a>
 </div>
 </div>
 </div>
 </nav>
 <main>
-<section class="relative pt-24 pb-32 overflow-hidden bg-gradient-to-br from-[rgb(40,120,229,0.1)] to-gray-900">
-<div class="absolute inset-0 bg-[url('https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/0100df0d155d7d36bf0d2842264fcf04.webp')] bg-cover bg-center opacity-20"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div class="text-left">
-<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">World's First CPQ AI Agents</h1>
-<p class="text-lg md:text-xl text-gray-300 mb-8">Titan AI helps sales-driven enterprises automate and optimize sales operations by integrating CPQ AI agents with built-in dynamic pricing intelligence</p>
-<div class="flex gap-4">
-<a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="w-full md:w-auto bg-primary text-white px-8 py-3 !rounded-button text-lg font-medium border-2 border-primary hover:bg-white hover:text-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-primary/50 text-center">Schedule Demo</a>
-</div>
-</div>
-<div class="bg-gray-800 p-4 md:p-8 rounded-lg shadow-xl">
-<div class="calendly-inline-widget" data-url="https://calendly.com/levy-titanaiagents/30min?back=1&background_color=111827&text_color=ffffff&primary_color=2878e5&hide_gdpr=1&hide_landing_page_details=1&theme=dark"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-</div>
-</div>
-</div>
+<section class="h-screen flex items-center justify-center bg-[linear-gradient(to_right,_#052561_0%,_#043c7c_40%,_#1554b3_60%,_#d3eef3_100%)]">
+  <div class="absolute inset-0 bg-[url('https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/0100df0d155d7d36bf0d2842264fcf04.webp')] bg-cover bg-center opacity-20"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="text-left">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-7">World's 1st Affordable Dynamic Pricing AI Agent</h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8"> Titan AI breaks the legacy monopoly on dynamic pricing technology, democratizing it to every business with affordability and quick adoption. </p>
+      <div class="flex gap-4">
+        <a href="https://calendly.com/fj544/sales-kick-off" target="_blank" class="w-full md:w-auto bg-primary text-white px-8 py-3 !rounded-button text-lg font-medium border-2 border-primary hover:bg-white hover:text-primary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-primary/50 text-center">Schedule Demo</a>
+      </div>
+    </div>
+    <div class="flex flex-col items-center">
+      <h2 class="text-2xl font-semibold text-white mb-1">Trusted by:</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 p-8 bg-gradient-to-r from-transparent rounded-xl">
+        <div class="flex items-center justify-center bg-white/90 rounded-2xl shadow-xl h-24 min-w-40 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="absolute inset-0 opacity-80 pointer-events-none rounded-2xl"></div>
+          <img src="https://i.imgur.com/hHMO7CL.png" alt="Logo 1" class="h-14 object-contain relative z-10" />
+        </div>
+        <div class="flex items-center justify-center bg-white/95 rounded-2xl shadow-xl h-24 min-w-40 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="absolute inset-0 opacity-80 pointer-events-none rounded-2xl"></div>
+          <img src="https://i.imgur.com/88vsmVH.png" alt="Logo 2" class="h-14 object-contain relative z-10" />
+        </div>
+        <div class="flex items-center justify-center bg-white rounded-2xl shadow-xl shadow-blue-900/10 border border-blue-100 h-24 min-w-40 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="absolute inset-0 opacity-80 pointer-events-none rounded-2xl"></div>
+          <img src="https://i.imgur.com/kcGzhuH.png" alt="Logo 3" class="h-14 object-contain relative z-10" />
+        </div>
+        <div class="flex items-center justify-center bg-white/90 rounded-2xl shadow-xl shadow-blue-900/10 border border-blue-100 h-24 min-w-40 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="absolute inset-0 opacity-80 pointer-events-none rounded-2xl"></div>
+          <img src="https://i.imgur.com/cp8o55C.png" alt="Logo 4" class="h-14 object-contain relative z-10" />
+        </div>
+        <div class="flex items-center justify-center bg-white/95 rounded-2xl shadow-xl shadow-blue-900/10 border border-blue-100 h-24 min-w-40 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="absolute inset-0 opacity-80 pointer-events-none rounded-2xl"></div>
+          <img src="https://i.imgur.com/varn1tp.png" alt="Logo 5" class="h-14 object-contain relative z-10" />
+        </div>
+        <div class="flex items-center justify-center bg-white rounded-2xl shadow-xl shadow-blue-900/10 border border-blue-100 h-24 min-w-40 relative overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+          <div class="absolute inset-0 opacity-80 pointer-events-none rounded-2xl"></div>
+          <img src="https://i.imgur.com/RG1daPO.png" alt="Logo 6" class="h-14 object-contain relative z-10" />
+        </div>
+      </div>
+      </div>
+    </div>
+
 </section>
-<section id="features" class="py-24 bg-gray-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="relative mb-24">
-<div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 to-transparent"></div>
-<div class="space-y-24">
-<div class="relative group cursor-pointer" onclick="toggleContent(1)">
-<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
-<span class="text-4xl font-bold text-primary">01</span>
-</div>
-<div class="ml-20">
-<div class="flex flex-col gap-2">
-<span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Differentiation</span>
-<h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">How is Titan AI’s CPQ Agent different from other CPQ software?
-</h3>
-</div>
-<div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-1">
-<div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50">
-<div class="flex flex-col gap-8">
-<div class="flex items-start gap-6">
-<div class="flex-shrink-0">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-brain-line text-primary text-2xl"></i>
-</div>
-</div>
-<div>
-<h4 class="text-xl font-semibold text-white mb-3">TitanAI is world's first true CPQ agent—not a static tool</h4>
-<p class="text-gray-300 leading-relaxed">Unlike traditional software that relies on human input, TitanAI actively thinks and executes the entire process: it understands, configures, prices, quotes, and updates CRM/ERP—automatically, and it will continuously learn and evolve from each deal</p>
-</div>
-</div>
-<div class="flex items-start gap-6">
-<div class="flex-shrink-0">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-lightbulb-line text-primary text-2xl"></i>
-</div>
-</div>
-<div>
-<h4 class="text-xl font-semibold text-white mb-3">Thinking: Makes the best configuring & pricing decisions—on every single deal</h4>
-<ul class="space-y-4 text-gray-300 leading-relaxed">
-<li class="flex items-start gap-2">
-<i class="ri-check-line text-primary mt-1"></i>
-<span>Decide optimal sourcing options alongside cross-sell/upsell to best satisfy customers and maximize revenue</span>
-</li>
-<li class="flex items-start gap-2">
-<i class="ri-check-line text-primary mt-1"></i>
-<span>Deliver margin-maximized pricing within win-rate targets by using proprietary pricing neural network trained on internal historical deals and external market insights</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="bg-gray-700/50 p-6 rounded-lg">
-<div class="flex items-center gap-3 mb-2">
-<i class="ri-rocket-line text-primary text-xl"></i>
-<span class="text-white font-medium">Execution: 100× faster and error-free automation of the entire CPQ process end-to-end</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="relative group cursor-pointer" onclick="toggleContent(2)">
-<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
-<span class="text-4xl font-bold text-primary">02</span>
-</div>
-<div class="ml-20">
-<div class="flex flex-col gap-2">
-<span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Integration</span>
-<h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">We already have a CPQ tool and don't want a big replacement project—can Titan AI still help?</h3>
-</div>
-<div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-2">
-<div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
-<div class="flex flex-col gap-6">
-<p class="text-gray-300 text-lg leading-relaxed">Yes. While Titan AI's end-to-end CPQ platform offers the fastest automation and smoothest user experience, you can also use Titan AI as a plug-in with your current CPQ system</p>
-<div class="space-y-4">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-plug-line text-primary text-xl"></i>
-</div>
-</div>
-<div>
-<h4 class="font-semibold text-white mb-2">Drop-in integration</h4>
-<p class="text-gray-300">Titan AI reads and writes directly to your existing CPQ, injecting automated configuration and pricing suggestions right into your team's familiar screens.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-apps-line text-primary text-xl"></i>
-</div>
-</div>
-<div>
-<h4 class="font-semibold text-white mb-2">Modular activation</h4>
-<p class="text-gray-300">Only turn on the features you want, such as pricing intelligence, quote automation, or cross-sell prompts—while keeping your current UI and workflows.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="relative group cursor-pointer" onclick="toggleContent(3)">
-<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
-<span class="text-4xl font-bold text-primary">03</span>
-</div>
-<div class="ml-20">
-<div class="flex flex-col gap-2">
-<span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Pricing</span>
-<h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">What's the pricing model—how much should I expect to invest?</h3>
-</div>
-<div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-3">
-<div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
-<p class="text-gray-300 text-lg leading-relaxed mb-6">We use an innovative token-based pricing model designed for flexibility and fairness.</p>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-coins-line text-primary text-xl"></i>
-</div>
-</div>
-<div>
-<h4 class="font-semibold text-white mb-2">Low upfront cost</h4>
-<p class="text-gray-300">Only a cost-covering, one-time fee for development and integration, including setup, customization, and connecting to your systems.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-exchange-funds-line text-primary text-xl"></i>
-</div>
-</div>
-<div>
-<h4 class="font-semibold text-white mb-2">Usage-based charging</h4>
-<p class="text-gray-300">After setup, fees are charged based on usage activity, with tokens serving as the standard unit. Smaller quotes consume fewer tokens, while larger or more complex tasks require more.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-<i class="ri-timer-flash-line text-primary text-xl"></i>
-</div>
-</div>
-<div>
-<h4 class="font-semibold text-white mb-2">No usage, no charge</h4>
-<p class="text-gray-300">When the agent is inactive, no need to pay anything, simple as that</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mb-16">
-<h2 class="text-3xl font-bold text-center mb-8">Industry Experts Design Your Enterprise AI Solutions</h2>
-<div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-<div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-code-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Technical Excellence</h3>
-<p class="text-gray-300">MIT-trained software engineers team with on average 6+ years of AI related experiences</p>
-</div>
-<div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-briefcase-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Industry Expertise</h3>
-<p class="text-gray-300">Ex-MBB consultants with in-depth industry knowledge and AI transformation experiences with 10+ Global F500 companies</p>
-</div>
-</div>
-</div>
-<div class="mb-16">
-<h2 class="text-3xl font-bold text-center mb-8">Common Challenges We Solve</h2>
-<div class="bg-gray-800/50 backdrop-blur-sm p-12 rounded-2xl shadow-2xl">
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
-<div class="relative mb-6">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">01</span>
-</div>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Configuration is slow and error-prone</h3>
-<ul class="space-y-3">
-<li class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>Sift through thousands of SKUs in spreadsheets</span>
-</li>
-<li class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>Misconfiguring components, missing required parts</span>
-</li>
-<li class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>Misapplying bundling and discounts</span>
-</li>
-</ul>
-<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
-<p class="text-sm text-gray-400">Causing delays, rework, and constant engineering intervention</p>
-</div>
-</div>
-<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
-<div class="relative mb-6">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">02</span>
-</div>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Pricing decisions are suboptimal</h3>
-<div class="space-y-3">
-<p class="text-gray-300">Reps rely on intuition or last-deal pricing, with:</p>
-<div class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>No visibility into upsell opportunities, customer segmentation, margin targets, cost drivers, or discount programs</span>
-</div>
-</div>
-<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
-<p class="text-sm text-gray-400">Leading to inconsistent pricing, over-discounts, and 5-10% margin leakage</p>
-</div>
-</div>
-<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
-<div class="relative mb-6">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">03</span>
-</div>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Manual quote generation</h3>
-<div class="space-y-3">
-<p class="text-gray-300">Generating a quote takes hours due to:</p>
-<div class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>Manual copy-pasting, constant revision, and lack of consistent standards</span>
-</div>
-</div>
-<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
-<p class="text-sm text-gray-400">Result in delayed response times, frequent errors, and lost sales opportunities</p>
-</div>
-</div>
-<div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-gray-700">
-<div class="relative mb-6">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
-<span class="text-3xl font-bold bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">04</span>
-</div>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Disconnected systems</h3>
-<div class="space-y-3">
-<div class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>Frequent disconnects between traditional CPQ and CRM/ERP systems</span>
-</div>
-<div class="flex items-start gap-2 text-gray-300">
-<i class="ri-error-warning-line text-primary mt-1"></i>
-<span>Inefficient email-based deal approval flow</span>
-</div>
-</div>
-<div class="mt-6 p-4 bg-gray-900/50 rounded-lg">
-<p class="text-sm text-gray-400">Poor deal data that undermines analysis and low-margin deals slip through</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mb-16">
-<h2 class="text-3xl font-bold text-center mb-8">How We Deliver Your Solutions</h2>
-<div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-<img src="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/bf3553b09aa1c4b4dc5cef85955617ed.png" alt="Solution Delivery Steps" class="w-full rounded-lg">
-</div>
-</div>
-<div class="grid md:grid-cols-3 gap-8 mb-24">
-<div class="p-8 rounded-lg bg-gray-800 shadow-lg hover:shadow-xl transition">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-shield-keyhole-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Private & Secure</h3>
-<p class="text-gray-300">Your data never leaves your infrastructure. Deploy AI agents within your secure environment with full control over data access and usage.</p>
-</div>
-<div class="p-8 rounded-lg bg-gray-800 shadow-lg hover:shadow-xl transition">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-settings-3-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Custom Solutions</h3>
-<p class="text-gray-300">Tailored AI agents designed specifically for your workflow and business processes, ensuring maximum efficiency and ROI.</p>
-</div>
-<div class="p-8 rounded-lg bg-gray-800 shadow-lg hover:shadow-xl transition">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-building-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-4 text-white">Enterprise Ready</h3>
-<p class="text-gray-300">Built for scale with enterprise-grade infrastructure, seamless integration capabilities, and comprehensive support.</p>
-</div>
-</div>
-<h2 class="text-3xl font-bold text-center mb-16">Our Targeted Use Cases</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-percent-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-2">AI Quoting</h3>
-<p class="text-gray-600 mb-4">Automate your quoting process and boost Return On Sales (ROS) by 8-10% with AI-powered pricing optimization</p>
-<div class="flex items-center justify-between text-sm">
-<span class="text-gray-500">Before: 3% ROS</span>
-<span class="text-primary font-semibold">After: 11% ROS</span>
-</div>
-</div>
-<div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-file-text-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-2">Healthcare Document Processing</h3>
-<p class="text-gray-600 mb-4">Automated healthcare document processing with 99.9% accuracy, reducing manual work by 85%</p>
-<div class="flex items-center justify-between text-sm">
-<span class="text-gray-500">Before: 4h/doc</span>
-<span class="text-primary font-semibold">After: 30sec/doc</span>
-</div>
-</div>
-<div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-lg mb-4">
-<i class="ri-settings-line text-primary text-2xl"></i>
-</div>
-<h3 class="text-xl font-semibold mb-2">Process Automation</h3>
-<p class="text-gray-600 mb-4">End-to-end workflow automation reducing manual tasks by 95% and improving accuracy</p>
-<div class="flex items-center justify-between text-sm">
-<span class="text-gray-500">Before: 8h/process</span>
-<span class="text-primary font-semibold">After: 15min/process</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="security" class="py-24 bg-gray-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h2 class="text-3xl font-bold mb-6">Enterprise-Grade Security Solutions</h2>
-<div class="space-y-4">
-<div class="flex items-start gap-4">
-<div class="w-6 h-6 flex items-center justify-center mt-1">
-<i class="ri-check-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-semibold mb-1">Private Cloud Deployment</h3>
-<p class="text-gray-300">Complete control over your infrastructure and data</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-6 h-6 flex items-center justify-center mt-1">
-<i class="ri-check-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-semibold mb-1">End-to-End Encryption</h3>
-<p class="text-gray-300">Military-grade encryption for all data in transit and at rest</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-6 h-6 flex items-center justify-center mt-1">
-<i class="ri-check-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-semibold mb-1">SOC 2 Type II Certified</h3>
-<p class="text-gray-300">Highest industry standard security compliance</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<img src="https://public.readdy.ai/ai/img_res/c863adfea0cd71c9dadb7572c4cf1a4f.jpg" alt="Security Infrastructure" class="rounded-lg shadow-xl">
-</div>
-</div>
-</div>
-</section>
-<section id="booking" class="py-24 bg-gray-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold mb-4 text-white">Calculate Your Business ROI</h2>
-<p class="text-gray-300 max-w-2xl mx-auto">See how much you can save with our AI solutions</p>
-</div>
-<div class="grid md:grid-cols-2 gap-12">
-<div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-<h3 class="text-xl font-semibold mb-6 text-white">ROI Calculator</h3>
-<div class="space-y-4">
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-1">Number of Employees</label>
-<input type="number" id="employees" class="w-full px-4 py-2 bg-gray-700 border-none text-white rounded focus:ring-2 focus:ring-primary focus:border-primary" placeholder="e.g. 100">
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-1">Average Hourly Rate ($)</label>
-<input type="number" id="rate" class="w-full px-4 py-2 bg-gray-700 border-none text-white rounded focus:ring-2 focus:ring-primary focus:border-primary" placeholder="e.g. 50">
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-300 mb-1">Efficiency Improvement (%)</label>
-<input type="number" id="efficiency" class="w-full px-4 py-2 bg-gray-700 border-none text-white rounded focus:ring-2 focus:ring-primary focus:border-primary" value="70" min="0" max="100">
-</div>
-<button onclick="calculateROI()" class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90">Calculate Savings</button>
-<div id="result" class="hidden p-4 bg-gray-700 rounded-lg">
-<p class="text-primary font-semibold">Annual Savings: $<span id="savings">0</span></p>
-<p class="text-gray-300 text-sm mt-2">Based on <span id="hoursPerWeek">0</span> hours saved per week</p>
-</div>
-</div>
-</div>
-<div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-<h3 class="text-xl font-semibold mb-6 text-white">Trusted by Industry Leaders</h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="flex items-center justify-center p-4 bg-gray-700 rounded">
-<span class="text-gray-300 font-semibold">Fortune 500</span>
-</div>
-<div class="flex items-center justify-center p-4 bg-gray-700 rounded">
-<span class="text-gray-300 font-semibold">Tech Giants</span>
-</div>
-<div class="flex items-center justify-center p-4 bg-gray-700 rounded">
-<span class="text-gray-300 font-semibold">Global Banks</span>
-</div>
-<div class="flex items-center justify-center p-4 bg-gray-700 rounded">
-<span class="text-gray-300 font-semibold">Healthcare</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-gradient-to-br from-[rgb(40,120,229,0.1)] to-gray-900 text-gray-300 py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-<div>
-<img src="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/a46c2fc381d6a6977a64035f5fd00b4e.png" alt="Titan AI Logo" class="h-8 mb-4">
-<p class="text-gray-300">Transforming enterprises with secure, private AI solutions</p>
-</div>
-<div>
-<h4 class="font-semibold mb-4">Quick Links</h4>
-<ul class="space-y-2">
-<li><a href="#features" class="text-gray-600 hover:text-primary">Features</a></li>
-<li><a href="#security" class="text-gray-600 hover:text-primary">Security</a></li>
-<li><a href="https://calendly.com/levy-titanaiagents/30min?back=1" target="_blank" class="text-gray-600 hover:text-primary">Book Demo</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-semibold mb-4">Contact</h4>
-<ul class="space-y-2">
-<li class="text-gray-600">levy@titanaiagents.com</li>
-</ul>
-</div>
-<div>
-<h4 class="font-semibold mb-4">Newsletter</h4>
-<form class="space-y-4">
-<input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-primary">
-<button type="submit" class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90">Subscribe</button>
-</form>
-</div>
-</div>
-<div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-300">&copy; 2025 All rights reserved.</p>
-<div class="flex space-x-6 mt-4 md:mt-0">
-<a href="https://www.linkedin.com/company/titan-ai-agent/?viewAsMember=true" class="text-gray-600 hover:text-primary" target="_blank">
-<i class="ri-linkedin-fill text-xl"></i>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script>
-function toggleMobileMenu() {
-  const mobileMenu = document.getElementById('mobileMenu');
-  mobileMenu.classList.toggle('hidden');
+
+<section id="CPQ Process" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-9">
+    <div class="relative mb-12">
+
+      
+      <div class="w-full flex items-center px-4 md:px-16 mt-auto pb-10 relative z-10">
+        <a id="step-configuring" onclick="showStep('configuring')"
+            class="step-item flex-1 border-2 border-primary rounded-full px-8 py-4 mx-2 cursor-pointer text-center transition-all duration-300">
+            <div class="font-bold text-lg text-flowchartTextInactive">Configuring</div>
+        </a>
+        <div class="h-1 w-8 bg-primary"></div>
+        <a id="step-pricing" onclick="showStep('pricing')"
+            class="step-item flex-1 border-2 border-primary rounded-full px-8 py-4 mx-2 cursor-pointer text-center transition-all duration-300">
+            <div class="font-bold text-lg text-flowchartTextInactive">Pricing</div>
+        </a>
+        <div class="h-1 w-8 bg-primary"></div>
+        <a id="step-quoting" onclick="showStep('quoting')"
+            class="step-item flex-1 border-2 border-primary rounded-full px-8 py-4 mx-2 cursor-pointer text-center transition-all duration-300">
+            <div class="font-bold text-lg text-flowchartTextInactive">Quoting</div>
+        </a>
+    </div>
+      
+      <div class="w-full flex justify-center">
+        <div class = "bg-gray-100 rounded-2xl shadow-2xl p-8 w-full max-w-6xl flex flex-col items-center">
+        <div id="video-configuring" class="hidden">
+          <img src="https://i.imgur.com/7XNTadT.gif" controls class="w-full max-w-5xl rounded-xl shadow-lg"></img>
+    <div class="mb-8">
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 w-full max-w-4xl mx-auto">
+      <li class="flex items-start text-xl text-black">
+        <span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+          <i class="ri-check-fill font-bold text-white text-2xl"></i>
+        </span> Auto-extract deal needs from unstructured emails 
+      </li>
+      <li class="flex items-start text-xl text-black">
+        <span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+          <i class="ri-check-fill font-bold text-white text-2xl"></i>
+        </span> Pull real-time inventory data via supplier APls
+      </li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0"><i class="ri-check-fill font-bold text-white text-2xl"></i></span> Recommend sourcing options based on key factors (i.e., cost, lead-time etc.)</li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0"><i class="ri-check-fill font-bold text-white text-2xl"></i></span> Recommend upsell and cross-sell options gathered during configuration </li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0"><i class="ri-check-fill font-bold text-white text-2xl"></i></span> Deliver final sourcing package for approval or order creation</li>
+    </ul>
+        </div>
+        <div id="video-pricing" class=""> <img src="https://i.imgur.com/QGukd5X.gif" controls class="w-full max-w-5xl rounded-xl shadow-lg"></img>
+              <div class="mb-8">
+              </div>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 w-full max-w-4xl mx-auto">
+      <li class="flex items-start text-xl text-black">
+        <span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+          <i class="ri-check-fill font-bold text-white text-2xl"></i>
+        </span> 
+        Trained on neural networks and gradient-boosted decision trees 
+      </li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+        <i class="ri-check-fill font-bold text-white text-2xl">
+        </i>
+      </span> 
+      Recommend the price that maximizes margin while meeting target win rate
+    </li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+        <i class="ri-check-fill font-bold text-white text-2xl">
+        </i>
+      </span> 
+      Adjust prices dynamically in real time based on product, customer, and context </li>
+
+
+      <li class="flex items-start text-xl text-black">
+        <span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+          <i class="ri-check-fill font-bold text-white text-2xl"></i>
+        </span> Support natural language prompts — humans tell agents what to change 
+      </li>
+
+      <li class="flex items-start text-xl text-black">
+        <span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+          <i class="ri-check-fill font-bold text-white text-2xl"></i>
+        </span> Deploy flexibly as a standalone tool or as a plug-in to existing pricing software 
+      </li>
+
+      <li class="flex items-start text-xl text-black">
+        <span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0">
+          <i class="ri-check-fill font-bold text-white text-2xl"></i>
+        </span> Learn through every deal and evolve continuously
+      </li>
+    </ul>
+        </div>
+        <div id="video-quoting" class="hidden">
+          <img src= "https://i.imgur.com/0dLzVqw.gif" controls class="w-full max-w-5xl rounded-xl shadow-lg"></img>
+              <div class="mb-8">
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 w-full max-w-4xl mx-auto">
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0"><i class="ri-check-fill font-bold text-white text-2xl"></i></span> Auto-approve compliant quotes and route low-margin deals to designated approvers </li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0"><i class="ri-check-fill font-bold text-white text-2xl"></i></span> Auto-fill ERP and CRM systems to provide an end-to-end fully automated experiences </li>
+      <li class="flex items-start text-xl text-black"><span class="inline-block w-7 h-7 bg-primary rounded-full flex items-center justify-center mr-2 text-white flex-shrink-0"><i class="ri-check-fill font-bold text-white text-2xl"></i></span> Auto-populate billing and logistics information that are both client and internal audit-ready </li>
+    </ul>
+        </div>
+      </div>
+      
+      <script>
+    function showStep(step) {
+    ['configuring', 'pricing', 'quoting'].forEach(s => {
+     const el = document.getElementById('step-' + s);
+    // 还原为未激活态：边框primary，背景透明，文字 flowchartTextInactive
+    el.classList.remove('bg-primary', 'text-white'); // 移除激活态的背景和文字颜色
+    el.classList.add('border-2', 'border-primary'); // 确保边框是primary
+    el.querySelector('.font-bold').classList.remove('text-white'); // 确保移除激活态的文字颜色
+    el.querySelector('.font-bold').classList.add('text-flowchartTextInactive'); // 设置未激活态文字颜色
+
+    // 隐藏视频
+    document.getElementById('video-' + s).classList.add('hidden');
+  });
+
+  // 激活当前步骤
+  const active = document.getElementById('step-' + step);
+  active.classList.remove('border-2', 'border-primary'); // 移除边框（因为它将被背景覆盖）
+  active.classList.add('bg-primary'); // 添加激活态的背景颜色
+  active.querySelector('.font-bold').classList.remove('text-flowchartTextInactive'); // 移除未激活态的文字颜色
+  active.querySelector('.font-bold').classList.add('text-white'); // 设置激活态文字颜色为白色
+
+  document.getElementById('video-' + step).classList.remove('hidden'); // 显示当前视频
 }
-function toggleContent(id) {
-  const content = document.getElementById(`content-${id}`);
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    setTimeout(() => {
-      content.classList.remove('opacity-0');
-    }, 50);
-  } else {
-    content.classList.add('opacity-0');
-    setTimeout(() => {
-      content.classList.add('hidden');
-    }, 300);
-  }
-}
-function calculateROI() {
-const employees = document.getElementById('employees').value || 0;
-const rate = document.getElementById('rate').value || 0;
-const efficiency = document.getElementById('efficiency').value || 70;
-const weeklyHours = 40;
-const hoursSaved = (weeklyHours * efficiency / 100);
-const annualSavings = employees * rate * hoursSaved * 52;
-document.getElementById('result').classList.remove('hidden');
-document.getElementById('savings').textContent = annualSavings.toLocaleString();
-document.getElementById('hoursPerWeek').textContent = (employees * hoursSaved).toFixed(1);
-}
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-e.preventDefault();
-document.querySelector(this.getAttribute('href')).scrollIntoView({
-behavior: 'smooth'
-});
-});
-});
+
+   //页面加载时，默认显示pricing
+   window.onload = function() {
+    showStep('pricing');
+   }
+
+   // 新增的 mobile menu toggle 函数
+   function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('hidden');
+    }
+
+    // `toggleContent` 函数已被移除，因为内容不再需要折叠/展开
+    // `window.addEventListener('DOMContentLoaded', (event) => { toggleContent(1); });` 也已移除
+
 </script>
+
+</section>
+
+<section id="Problems we solved" class="py-16 bg-secondary">
+  <h2 class="text-4xl font-extrabold text-center text-gray-100 mb-10">Problems We Solved</h2>
+  
+  <div class="max-w-4xl mx-auto mb-12">
+    <h3 class="text-2xl font-bold text-center text-primary mb-6">Main pain point</h3>
+    <div class="flex flex-col p-8 bg-[rgba(31,41,55,0.7)] rounded-xl shadow-lg border border-gray-700 transition-transform duration-300 hover:scale-105">
+      <div class="flex items-center mb-4">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+          <span class="text-3xl font-bold text-primary">01</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white">Pricing decisions are intuitive and suboptimal</h3>
+      </div>
+      <div class="space-y-3 text-left">
+        <p class="text-base text-gray-300">Sales representatives rely on intuition or guesswork, without visibility into:</p>
+        <ul class="space-y-3 text-base text-gray-300">
+          <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Historical similar deals and how are they priced
+          </li>
+          <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Customer willingness to pay, company margin targets, cost drivers, or discount programs
+          </li>
+        </ul>
+      </div>
+      <div class="mt-6 p-4 bg-gray-900/50 rounded-lg w-full">
+        <h3 class="text-xl font-bold text-consequenceRed mb-4">Consequence:</h3>
+        <ul class="space-y-4 text-base text-white">
+          <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Manual and slow pricing process</li>
+          <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Over-discounts and 5% - 25% margin leakage</li>
+          <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Pricing inconsistencies for similar deal contexts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto">
+    <h3 class="text-2xl font-bold text-center text-primary mb-6">Other pain points</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <div class="grid grid-rows-[150px_200px_auto] h-full p-6 bg-[rgba(31,41,55,0.6)] rounded-xl shadow-lg border border-gray-700 transition-transform duration-300 hover:scale-105">
+        <div class="flex items-center mb-4"> <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="text-3xl font-bold text-primary">02</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Experience-based configuration is incompatible and costly</h3>
+        </div>
+        <div class="space-y-3 text-left overflow-hidden">
+          <p class="text-base text-gray-300">Sales reps give low-quality configurations:</p>
+          <ul class="space-y-3 text-base text-gray-300">
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Receive vague customer requests</li>
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Guess the right product model from thousands of SKUs</li>
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Misapply bundling and discounts</li>
+          </ul>
+        </div>
+        <div class="mt-0 p-4 bg-gray-900/50 rounded-lg w-full">
+          <h3 class="text-xl font-bold text-consequenceRed mb-4">Consequence:</h3>
+          <ul class="space-y-4 text-base text-white">
+            <li class="flex items-start gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Lost potential deals</li>
+            <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Margin lost due to costly procurement</li>
+            <li class="flex items-start gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Missed upselling/cross-selling opportunities</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid grid-rows-[150px_200px_auto] h-full p-6 bg-[rgba(31,41,55,0.6)] rounded-xl shadow-lg border border-gray-700 transition-transform duration-300 hover:scale-105">
+        <div class="flex items-center mb-4"> <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="text-3xl font-bold text-primary">03</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Manual quoting is costly, slow, and error-prone</h3>
+        </div>
+        <div class="space-y-3 text-left overflow-hidden">
+          <p class="text-base text-gray-300">Generating a quote takes hours due to:</p>
+          <ul class="space-y-3 text-base text-gray-300">
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Manual copy-pasting</li>
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Constant revision</li>
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Lack of consistent standards</li>
+          </ul>
+        </div>
+        <div class="mt-0 p-4 bg-gray-900/50 rounded-lg w-full">
+          <h3 class="text-xl font-bold text-consequenceRed mb-4">Consequence:</h3>
+          <ul class="space-y-4 text-base text-white">
+            <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Manual errors</li>
+            <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Long customer waiting time</li>
+            <li class="flex items-center gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Low customer satisfaction</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid grid-rows-[150px_200px_auto] h-full p-6 bg-[rgba(31,41,55,0.6)] rounded-xl shadow-lg border border-gray-700 transition-transform duration-300 hover:scale-105">
+        <div class="flex items-center mb-4"> <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+            <span class="text-3xl font-bold text-primary">04</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white">Manual updating CRM / ERP, billing & logistics is time-consuming</h3>
+        </div>
+        <div class="space-y-3 text-left overflow-hidden">
+          <p class="text-base text-gray-300">Frequent manual CRM / ERP, billing & logistics updates after each quote lead to:</p>
+          <ul class="space-y-3 text-base text-gray-300">
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Repetitive, low-value updates drive careless entries</li>
+            <li class="flex items-start gap-2"><i class="ri-error-warning-line text-primary"></i>Low ROI on time that could be better spent on high-value selling activities</li>
+          </ul>
+        </div>
+        <div class="mt-0 p-4 bg-gray-900/50 rounded-lg w-full">
+          <h3 class="text-xl font-bold text-consequenceRed mb-4">Consequence:</h3>
+          <ul class="space-y-4 text-base text-white">
+            <li class="flex items-start gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Poor CRM / ERP, billing & logistics data quality</li>
+            <li class="flex items-start gap-2"><i class="ri-alert-line text-consequenceRed text-xl"></i>Undermined analytics, forecasting, and resource planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Our-solution" class="py-20 bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Our Solution</h2>
+      <p class="text-lg text-gray-600 mb-12">Our customers experience margin uplift and quoting time reduction in a short period of time</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col transform transition-transform duration-300 hover:scale-105">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Before</h3>
+              <div class="flex items-center justify-center mb-6">
+                  <span class="text-3xl font-bold text-primary mr-2">1h / quote</span>
+                  <i class="ri-time-line text-primary text-3xl"></i>
+              </div>
+              <div class="space-y-8 flex-grow">
+                  <div class="relative pl-6 border-l-2 border-primary/50">
+                      <div class="absolute -left-2.5 top-0 w-4 h-4 bg-primary rounded-full flex items-center justify-center">
+                          <div class="w-1.5 h-1.5 bg-white rounded-full"></div> </div>
+                      <h4 class="text-xl font-semibold text-gray-800 mb-2 text-left">Pricing</h4>
+                      <p class="text-gray-600 mb-2 text-left">15 mins - 6 hours</p>
+                      <ul class="text-gray-700 text-base list-none space-y-2">
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Gather pricing intelligence through manual searches or peer inquiries (e.g., historical comparable, promotion programs)</span>
+                          </li>
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Manually input, analyze, and adjust pricing to optimize win rates and margin objectives</span>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="relative pl-6 border-l-2 border-primary/50">
+                      <div class="absolute -left-2.5 top-0 w-4 h-4 bg-primary rounded-full flex items-center justify-center">
+                          <div class="w-1.5 h-1.5 bg-white rounded-full"></div> </div>
+                      <h4 class="text-xl font-semibold text-gray-800 mb-2 text-left">Quoting</h4>
+                      <p class="text-gray-600 mb-2 text-left">30 mins - 3 hours</p>
+                      <ul class="text-gray-700 text-base list-none space-y-2">
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Redo entire CPQ process if any customer comments</span>
+                          </li>
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Manually input logistics and billing information upon confirmation</span>
+                          </li>
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Manually update ERP/CRM systems after finalizing the quote</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-xl shadow-lg border border-primary flex flex-col transform transition-transform duration-300 hover:scale-105">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">After</h3>
+              <div class="flex items-center justify-center mb-6">
+                  <span class="text-3xl font-bold text-primary mr-2">40s / quote</span>
+                  <i class="ri-time-fill text-primary text-3xl"></i>
+              </div>
+              <div class="space-y-8 flex-grow">
+                  <div class="relative pl-6 border-l-2 border-primary/50">
+                      <div class="absolute -left-2.5 top-0 w-4 h-4 bg-primary rounded-full flex items-center justify-center">
+                          <div class="w-1.5 h-1.5 bg-white rounded-full"></div> </div>
+                      <h4 class="text-xl font-semibold text-gray-800 mb-2 text-left">Pricing with Titan AI</h4>
+                      <p class="text-gray-600 mb-2 text-left">~10 secs</p>
+                      <ul class="text-gray-700 text-base list-none space-y-2">
+                          <li class="flex items-start space-x-2">
+                              <span class="2 w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></span>
+                              <span class="text-left flex-1">Automatically generate margin-maximized pricing aligned with sellers' target win rates</span>
+                          </li>
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Fetch comprehensive pricing intelligence (e.g., historical comparables and promotional programs) to enable optimal decision-making and benchmarking)</span>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="relative pl-6 border-l-2 border-primary/50">
+                      <div class="absolute -left-2.5 top-0 w-4 h-4 bg-primary rounded-full flex items-center justify-center">
+                          <div class="w-1.5 h-1.5 bg-white rounded-full"></div> </div>
+                      <h4 class="text-xl font-semibold text-gray-800 mb-2 text-left">Quoting with Titan AI</h4>
+                      <p class="text-gray-600 mb-2 text-left">~30 secs</p>
+                      <ul class="text-gray-700 text-base list-none space-y-2">
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Automatically ship finalized quote and auto-replace and reprice products if any customer comments</span>
+                          </li>
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Automatically populate logistics and billing info.</span>
+                          </li>
+                          <li class="flex items-start space-x-2">
+                              <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                              <span class="text-left flex-1">Sync deal information seamlessly with CRM/ERP systems</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-xl shadow-lg border border-gray-200 flex flex-col items-start transform transition-transform duration-300 hover:scale-105">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6 w-full text-center">Impact</h3>
+              <div class="space-y-6 flex-grow flex flex-col justify-center w-full">
+                  <div class="flex items-center bg-gray-200 p-4 rounded-lg w-full">
+                      <i class="ri-flashlight-line text-primary text-3xl mr-4 flex-shrink-0"></i>
+                      <p class="text-gray-800 text-lg font-medium text-left flex-1">50x-100x Faster pricing time</p>
+                  </div>
+                  <div class="flex items-center bg-gray-200 p-4 rounded-lg w-full">
+                      <i class="ri-line-chart-fill text-primary text-3xl mr-4 flex-shrink-0"></i>
+                      <p class="text-gray-800 text-lg font-medium text-left flex-1">1.5%-20%+ Margin uplift</p>
+                  </div>
+                  <div class="flex items-center bg-gray-200 p-4 rounded-lg w-full">
+                      <i class="ri-dashboard-line text-primary text-3xl mr-4 flex-shrink-0"></i>
+                      <p class="text-gray-800 text-lg font-medium text-left flex-1">50-70% Reduction in manual pricing overhead</p>
+                  </div>
+                  <div class="flex items-center bg-gray-200 p-4 rounded-lg w-full">
+                      <i class="ri-user-add-line text-primary text-3xl mr-4 flex-shrink-0"></i>
+                      <p class="text-gray-800 text-lg font-medium text-left flex-1">10%-20%+ Increase in customer acceptance</p>
+                  </div>
+                  <div class="flex items-center bg-gray-200 p-4 rounded-lg w-full">
+                      <i class="ri-database-line text-primary text-3xl mr-4 flex-shrink-0"></i>
+                      <p class="text-gray-800 text-lg font-medium text-left flex-1">60%+ Increase in CRM/ERP data accuracy</p>
+                  </div>
+                  <div class="flex items-center bg-gray-200 p-4 rounded-lg w-full">
+                      <i class="ri-send-plane-line text-primary text-3xl mr-4 flex-shrink-0"></i>
+                      <p class="text-gray-800 text-lg font-medium text-left flex-1">50x-100x Faster quote generation time</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="why-we-stand-out" class="py-20 bg-secondary text-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-extrabold text-white mb-4">Why We Stand Out?</h2>
+        <p class="text-lg text-gray-300 mb-12">Our pricing agent breaks the legacy monopoly on dynamic pricing technology, democratizing it to every business</p>
+
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+            <!-- Left Side: Quadrant Grid and Axis Labels Container -->
+            <div class="relative flex-grow max-w-4xl w-full bg-white rounded-xl shadow-lg border border-gray-700 p-6 md:p-8 pb-16">
+                <!-- Grid Container -->
+                <div class="grid grid-cols-2 grid-rows-2 h-[500px] md:h-[600px] border-2 border-gray-300 relative z-10">
+                    <!-- The actual grid cells go here -->
+                    <!-- Top Left: Expensive Dynamic Solution -->
+                    <div class="flex flex-col items-center justify-center p-4 border-r-2 border-b-2 border-gray-300">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Expensive Dynamic Solution</h4>
+                        <div class="flex flex-wrap justify-center items-center gap-4">
+                            <img src="https://i.imgur.com/PJgTFpf.png" alt="Vendavo Logo" class="h-10 object-contain">
+                            <img src="https://i.imgur.com/c6bUyCw.png" alt="PriceFX Logo" class="h-10 object-contain">
+                            <img src="https://i.imgur.com/GNqQpe9.png" alt="PROS Logo" class="h-10 object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Top Right: Dynamic pricing AI agent for Mass Market -->
+                    <div class="flex flex-col items-center justify-center p-4 border-b-2 border-gray-300 bg-blue-50">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Dynamic pricing AI agent for Mass Market</h4>
+                        <img src="https://i.imgur.com/P9pLds8.pngg" alt="Titan AI Logo" class="h-12 object-contain">
+                    </div>
+
+                    <!-- Bottom Left: Pricing Advisory -->
+                    <div class="flex flex-col items-center justify-center p-4 border-r-2 border-gray-300">
+                        <h4 class="text-xl font-bold text-gray-900 mb-6">Pricing Advisory</h4>
+                        <div class="flex flex-wrap justify-center items-center gap-4">
+                            <img src="https://i.imgur.com/pFvtfFa.png" alt="Simon-Kucher Logo" class="h-14 object-contain">
+                            <img src="https://i.imgur.com/VsfgAYv.png" alt="OliverWyman 3" class="h-14 object-contain">
+                            <img src="https://i.imgur.com/sD0ZnVD.png" alt="Roland Berger" class="h-14 object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Bottom Right: Static or rule-based tool -->
+                    <div class="flex flex-col items-center justify-center p-4">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Static or rule-based tool</h4>
+                        <div class="flex flex-wrap justify-center items-center gap-4">
+                            <img src="https://i.imgur.com/cDYNLjr.png" alt="Salesforce Logo" class="h-16 object-contain">
+                            <img src="https://i.imgur.com/Nip89IY.png" alt="Oracle Logo" class="h-16 object-contain">
+                            <img src="https://i.imgur.com/JxBC28E.png" alt="Dealhub Logo" class="h-16 object-contain">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW ARROW DIVS positioned relative to the parent padding -->
+                <!-- Vertical Arrow alongside Technical capability -->
+                <!-- line is 2px wide, padding is p-6 (24px). 24 - 1 = 23px from left -->
+                <div class="absolute left-[19px] top-[28px] bottom-[18px] w-[2px] bg-primary axis-arrow-y z-20"></div>
+
+                <!-- Horizontal Arrow below Cost effectiveness -->
+                <!-- line is 2px high, padding is pb-16 (16px). 16 - 1 = 15px from bottom -->
+                <div class="absolute left-[19px] right-[20px] bottom-[18px] h-[2px] bg-primary axis-arrow-x z-20"></div>
+
+
+                <!-- Axes Labels -->
+                <!-- Y-Axis Label: Technical capability (rotated) -->
+                <!-- Adjusted left positioning to be closer to the new arrow line -->
+                <span
+                  class="absolute top-1/2 left-[40px] translate-y-16 transform -rotate-90 text-white font-bold text-base md:text-lg whitespace-nowrap"
+                  style="transform-origin: 0% 50%; left: -40px;">
+                  Technical capability
+                </span>
+
+                <!-- Y-Axis Extremes (Dynamic, ML-driven & Static, rule-based) -->
+                <span class="absolute top-8 -left-4 text-white text-sm w-24 text-right transform -translate-x-full">Dynamic,<br>ML-driven</span>
+                <span class="absolute bottom-8 -left-4 text-white text-sm w-24 text-right transform -translate-x-full">Static,<br>rule-based</span>
+
+                <!-- X-Axis Label: Cost effectiveness -->
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-12 text-white font-bold text-base md:text-lg whitespace-nowrap">Cost effectiveness</span>
+
+                <!-- X-Axis Extremes -->
+                <span class="absolute bottom-0 left-8 translate-y-8 text-white text-sm whitespace-nowrap">~$1M-$20M / yr</span>
+                <span class="absolute bottom-0 right-8 translate-y-8 text-white text-sm whitespace-nowrap">Affordable / flexible</span>
+            </div>
+
+            <!-- Right Side: Explanations - Mass market leaders -->
+            <div id="massMarketLeaders" class="flex-shrink-0 w-full lg:w-1/3 bg-gray-900/50 border border-blue-500 rounded-xl p-8 text-left shadow-xl
+                        transform transition-transform duration-300 ease-out cursor-pointer hover:scale-105 relative z-20"
+                 onclick="toggleEnlarge(this)">
+                <h3 class="text-2xl font-bold text-white mb-6">Mass market leader</h3>
+                <p class="text-lg text-gray-300 mb-6">Dynamic pricing tools are largely proprietary, used by Fortune 500s, and often cost $5M+ per year</p>
+                <div class="border-l-4 border-primary pl-4 py-2">
+                    <p class="text-lg text-white font-medium">We're democratizing this technology by combining domain expertise with practical know-how to deliver it efficiently and affordably.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Custom CSS for Precise Axis Arrows */
+        /* Vertical Arrow (left side of grid) */
+        .axis-arrow-y::before,
+        .axis-arrow-y::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: solid transparent;
+            border-width: 0 0.3rem 0.5rem 0.3rem; /* Small arrow size */
+        }
+        .axis-arrow-y::before {
+            top: -0.5rem; /* Position at the very top of the line */
+            border-bottom-color: #069edd; /* Primary color */
+        }
+        .axis-arrow-y::after {
+            bottom: -0.5rem; /* Position at the very bottom of the line */
+            border-top-color: #069edd; /* Primary color */
+        }
+
+        /* Horizontal Arrow (bottom of grid) */
+  
+        .axis-arrow-x::before { display: none; }
+        .axis-arrow-x::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -0.5rem;
+            border: solid transparent;
+            border-width: 0.3rem 0 0.3rem 0.5rem;
+            border-left-color: #069edd;
+        }
+    </style>
+
+    <script>
+        function toggleEnlarge(element) {
+            const isEnlarged = element.classList.contains('enlarged');
+
+          if (isEnlarged) {
+              element.classList.remove('enlarged', 'fixed', 'inset-0', 'w-screen', 'h-screen', 'm-auto', 'max-w-full', 'max-h-full', 'z-50', 'flex-grow');
+              element.classList.add('flex-shrink-0', 'lg:w-1/3');
+          } else {
+              element.classList.add('enlarged', 'fixed', 'inset-0', 'w-screen', 'h-screen', 'm-auto', 'max-w-full', 'max-h-full', 'z-50', 'flex-grow');
+              element.classList.remove('flex-shrink-0', 'lg:w-1/3');
+          }
+      }
+  </script>
+</section>
+
+<section id="our-team" class="py-20 bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Our Team</h2>
+      <p class="text-lg text-gray-600 mb-12">We have strong pricing and AI leaders to realize your margin gain</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-7">
+          <!-- Pricing Expertise Column -->
+          <div class="flex flex-col items-center">
+
+              <div class="grid grid-cols-2 gap-4 mb-8 w-full max-w-md">
+                <div class="flex items-center justify-center p-2 rounded-lg">
+                  <img src="https://i.imgur.com/zFdaDTo.png" alt="Bain & Company Logo" class="h-14 object-contain">
+              </div>
+              <div class="flex items-center justify-center p-2 rounded-lg">
+                <img src="https://images.squarespace-cdn.com/content/v1/5f71d110704fd32c33582494/93a90153-f117-4689-8891-a30bd3f70bb1/FTI-Consulting-Logo.png" alt="FTI Logo" class="h-14 object-contain">
+            </div>
+                  <div class="flex items-center justify-center p-2 rounded-lg">
+                      <img src="https://i.imgur.com/PJgTFpf.png" alt="Vendavo Logo" class="h-12 object-contain">
+                  </div>
+                  <div class="flex items-center justify-center p-2 rounded-lg">
+                      <img src="https://i.imgur.com/c6bUyCw.png" alt="PriceFX Logo" class="h-12 object-contain">
+                  </div>
+
+              </div>
+              <div class="flex items-center space-x-4 mb-8">
+                <i class="ri-money-dollar-circle-fill text-primary text-4xl"></i>
+                  <h3 class="text-3xl font-bold text-primary">Deep pricing understanding</h3>
+                  
+                  
+              </div>
+              <p class="text-gray-600 mb-8">A team of pricing leaders worked at top pricing solutions vendors</p>
+              
+              <div class="space-y-4 text-left w-full">
+                  <!-- Added fixed height and flex items-center for vertical alignment -->
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center duration-300 hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Precise identification of pricing pain points across quoting, discounting, and approval workflows</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Tailored approach with consideration of business specific pricing rules and nuances</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span> AI-powered dynamic pricing agent that helps balance margin goals with sales win rates</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Proprietary data cleaning tools used to quickly sanitize datasets into feed-in ready pricing model</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Battle-tested change management playbook that ensures seamless system integration and sellers' adoption</span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Technical Expertise Column -->
+          <div class="flex flex-col items-center">
+              
+              <div class="grid grid-cols-2 gap-4 mb-8 w-full max-w-md">
+                  <div class="flex items-center justify-center p-2 rounded-lg">
+                      <img src="https://1000logos.net/wp-content/uploads/2022/08/MIT-Logo.png" alt="MIT Logo" class="h-16 object-contain">
+                  </div>
+                  <div class="flex items-center justify-center p-2 rounded-lg">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="h-14 object-contain">
+                  </div>
+                  <div class="flex items-center justify-center p-2 rounded-lg">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png" alt="Google Logo" class="h-10 object-contain">
+                  </div>
+                  <div class="flex items-center justify-center p-2 rounded-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/640px-TikTok_logo.svg.png" alt="TikTok_logo" class="h-10 object-contain">
+                </div>
+              </div>
+              <div class="flex items-center space-x-4 mb-8">
+                <i class="ri-lightbulb-fill text-primary text-4xl"></i>
+                <h3 class="text-3xl font-bold text-primary">Best AI technical expertise</h3>
+            </div>
+            <p class="text-gray-600 mb-8">A team of Google/Apple/MIT-trained engineers specialized in AI/LLM fine-tuning</p>
+              
+              <div class="space-y-4 text-left w-full">
+                  <!-- Added fixed height and flex items-center for vertical alignment -->
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>User-friendly interfaces powered by fast and intuitive user adoption</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Pricing-specific AI models built to reflect deal context, customer behavior, and product-level margin dynamics</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Flexible deployment options across cloud and on-premise environments to meet enterprise data requirements</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>Optimized model training and inference acceleration that enhances processing speed, response time, and model accuracy</span>
+                      </p>
+                  </div>
+                  <div class="bg-gray-100 p-4 rounded-lg border border-gray-200 h-20 flex items-center hover:shadow-xl">
+                      <p class="text-gray-800 flex items-start gap-2">
+                          <span class="mt-2 w-2 h-2 bg-primary rounded-full flex-shrink-0"></span>
+                          <span>End-to-end managed pricing services from model training to monitoring and continuous improvement</span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="FAQs" class="py-24 bg-secondary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative mb-8">
+          <div class="absolute left-8 top-10 bottom-0 w-0.5 bg-gradient-to-b from-primary/50 to-transparent z-10"></div>
+          <div class="space-y-24">
+              <!-- FAQ Item 1 -->
+              <div class="relative group cursor-pointer" onclick="toggleContent(1)">
+                  <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
+                      <span class="text-4xl font-bold text-primary">01</span>
+                  </div>
+                  <div class="ml-20">
+                      <div class="flex flex-col gap-2">
+                          <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Differentiation</span>
+                          <h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">How is Titan AI's dynamic pricing AI agent different from other pricing software?
+                          </h3>
+                      </div>
+                      <div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-1">
+                          <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-900/50 duration-300 hover:scale-105 hover:shadow-2xl">
+                              <div class="flex flex-col gap-8">
+                                  <div class="flex items-start gap-6">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                              <i class="ri-brain-line text-primary text-2xl"></i>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-3">Titan AI is world's first true pricing AI agent — not a static tool</h4>
+                                          <p class="text-gray-300 leading-relaxed">Unlike traditional softwares that rely on human inputs, spreadsheets, and rigid rules, Titan AI actively thinks and executes the entire process: it understands, prices, quotes, and updates CRM/ERP — automatically, and it will continuously learn and evolve from each deal. Our pricing tool can achieve 100% of automation, accuracy and interpretability. </p>
+                                      </div>
+                                  </div>
+                                  <div class="flex items-start gap-6">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                              <i class="ri-lightbulb-line text-primary text-2xl"></i>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-3">Thinking: Makes the best pricing & quoting — every single deal</h4>
+                                          <p class="text-gray-300 leading-relaxed"> Deliver margin-maximized pricing within win-rate targets by using proprietary pricing neural networks and gradient boosted decision trees trained on internal historical deals and external market insights. </p>
+                                      </div>
+                                  </div>
+
+                                  <div class="flex items-start gap-6">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                              <i class="ri-rocket-line text-primary text-xl"></i>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-3">Execution: Delivers the entire dynamic pricing process end-to-end</h4>
+                                          <p class="text-gray-300 leading-relaxed"> 100x faster and error-free. </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="relative group cursor-pointer" onclick="toggleContent(2)">
+                  <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
+                      <span class="text-4xl font-bold text-primary">02</span>
+                  </div>
+                  <div class="ml-20">
+                      <div class="flex flex-col gap-2">
+                          <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Integration</span>
+                          <h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">We already have a pricing tool and don't want a big replacement project — can Titan AI still help?</h3>
+                      </div>
+                      <div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-2">
+                          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-900/50 duration-300 hover:scale-105 hover:shadow-2xl">
+                              <div class="flex flex-col gap-6">
+                                  <p class="text-gray-300 text-lg leading-relaxed">Of course! Our pricing AI agent can operate as a standalone tool or as a plug-in to existing pricing or quoting software.</p>
+                                  <div class="space-y-6">
+                                      <div class="flex items-start gap-4">
+                                          <div class="flex-shrink-0">
+                                              <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                                  <i class="ri-plug-line text-primary text-xl"></i>
+                                              </div>
+                                          </div>
+                                          <div>
+                                              <h4 class="text-xl font-semibold text-white mb-2">Drop-in integration</h4>
+                                              <p class="text-gray-300">Titan AI reads and writes directly to your existing pricing software, injecting automated pricing suggestions right into your team's familiar screens.</p>
+                                          </div>
+                                      </div>
+                                      <div class="flex items-start gap-4">
+                                          <div class="flex-shrink-0">
+                                              <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                                  <i class="ri-apps-line text-primary text-xl"></i>
+                                              </div>
+                                          </div>
+                                          <div>
+                                              <h4 class="text-xl font-semibold text-white mb-2">Modular activation</h4>
+                                              <p class="text-gray-300"> We offer 100% flexibility. You can only turn on the features you want, such as pricing intelligence, quote automation, or cross-sell prompts — while keeping your current UI and workflows.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="relative group cursor-pointer" onclick="toggleContent(3)">
+                  <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
+                      <span class="text-4xl font-bold text-primary">03</span>
+                  </div>
+                  <div class="ml-20">
+                      <div class="flex flex-col gap-2">
+                          <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Concern</span>
+                          <h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">We’ve tried similar tools, but they didn’t work — can I trust Titan AI? </h3>
+                      </div>
+                      <div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-3">
+                          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 duration-300 hover:scale-105 hover:shadow-2xl">
+                              <div class="space-y-6">
+
+                                  <div class="flex items-start gap-4">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                            <i class="ri-error-warning-line text-primary text-xl"></i>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-2">Most tools fail because they’re:</h4>
+                                          <ul class="space-y-2 text-gray-300 leading-relaxed list-none">
+                                              <li class="flex items-start gap-2">
+                                                  <i class="ri-check-line text-primary flex-shrink-0 "></i>
+                                                  <span>Not built for your industry-specific and company-specific needs</span>
+                                              </li>
+                                              <li class="flex items-start gap-2">
+                                                  <i class="ri-check-line text-primary flex-shrink-0 "></i>
+                                                  <span>Use a one-size-fits-all, rule-based model that doesn’t adapt per deal.</span>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                      
+                                  </div>
+                                  <p class="text-gray-300 text-lg leading-relaxed"> We don't believe one-size-fits-all. Our tool will be tailored for your industry and company know-hows and needs. Also, our dynamic pricing recommendations are based on each deal’s context instead of rigid rules. So, you can fully trust our solution!</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="relative group cursor-pointer" onclick="toggleContent(4)">
+                  <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center absolute -left-10 -translate-x-1/2 shadow-lg shadow-primary/20">
+                      <span class="text-4xl font-bold text-primary">04</span>
+                  </div>
+                  <div class="ml-20">
+                      <div class="flex flex-col gap-2">
+                          <span class="px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm w-fit">Pricing</span>
+                          <h3 class="text-4xl font-bold text-white/80 group-hover:text-white transition-colors">What's the pricing model — how much should I expect to invest?</h3>
+                      </div>
+                      <!-- Corrected ID from content-3 to content-4 -->
+                      <div class="hidden opacity-0 transition-all duration-300 ease-out mt-8" id="content-4">
+                          <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 duration-300 hover:scale-105 hover:shadow-2xl">
+                              <div class="space-y-6">
+                                  <div class="flex items-start gap-4">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                              <i class="ri-coins-line text-primary text-xl"></i>
+                                          </div>
+                                      </div>
+                                      <!-- Corrected: This div was missing its opening and closing tags -->
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-2">Low upfront implementation fee</h4>
+                                          <p class="text-gray-300">Only a cost-covering, one-time fee for development and integration, including setup, customization, and connecting to your systems.</p>
+                                      </div>
+                                  </div>
+                                  <div class="flex items-start gap-4">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                              <i class="ri-exchange-funds-line text-primary text-xl"></i>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-2">Recurring outcome-based fee</h4>
+                                          <p class="text-300 text-gray-300 mb-1">We charge a share of the margin uplift and cost savings our tool delivers. In othe words, you only need to pay when we make profit for you. </p>
+                                      </div>
+                                  </div>
+                                  <div class="flex items-start gap-4">
+                                      <div class="flex-shrink-0">
+                                          <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                              <i class="ri-timer-flash-line text-primary text-xl"></i>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <h4 class="text-xl font-semibold text-white mb-2">No usage, no charge</h4>
+                                          <p class="text-gray-300">When the agent is inactive, no need to pay anything.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<script>
+  function toggleContent(id) {
+      const contentDiv = document.getElementById(`content-${id}`);
+      if (contentDiv) {
+          if (contentDiv.classList.contains('hidden')) {
+              // Show the content
+              contentDiv.classList.remove('hidden', 'opacity-0');
+              contentDiv.classList.add('opacity-100');
+          } else {
+              // Hide the content
+              contentDiv.classList.remove('opacity-100');
+              contentDiv.classList.add('opacity-0');
+              // Use a timeout to hide 'hidden' class after transition completes
+              setTimeout(() => {
+                  contentDiv.classList.add('hidden');
+              }, 300); // Must match the transition duration
+          }
+      }
+  }
+</script>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+</main>
+<script>
+  function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('hidden');
+  }
+  function toggleContent(id) {
+    const content = document.getElementById(`content-${id}`);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      setTimeout(() => {
+        content.classList.remove('opacity-0');
+      }, 50);
+    } else {
+      content.classList.add('opacity-0');
+      setTimeout(() => {
+        content.classList.add('hidden');
+      }, 300);
+    }
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector(this.getAttribute('href')).scrollIntoView({
+  behavior: 'smooth'
+  });
+  });
+  });
+  </script>
+  <!--与上面w-full bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-700呼应-->
+  <footer class="bg-gradient-to-br from-gray-900 to-gray-700 backdrop-blur-sm z-50 border-b border-gray-700 text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Column 1: Company Logo & Description -->
+            <div>
+                <img src="https://static.readdy.ai/image/736cb33f85ee328c22e5d7e17bec9c40/a46c2fc381d6a6977a64035f5fd00b4e.png" alt="Titan AI Logo" class="h-8 mb-4">
+                <p class="text-gray-300">Democratizing dynamic pricing tool <br> to every business <br> with affordability and quick adoption</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="font-semibold mb-4 text-gray-300">Navigator</h4>
+                <ul class="space-y-2">
+                    <li><a href="#CPQ Process" class="text-gray-300 hover:text-primary transition-colors">CPQ process</a></li>
+                    <li><a href="#Problems we solved" class="text-gray-300 hover:text-primary transition-colors">Problems we solved</a></li>
+                    <li><a href="#Our-solution" class="text-gray-300 hover:text-primary transition-colors">Titan AI solution</a></li>
+                    <li><a href="#why-we-stand-out" class="text-gray-300 hover:text-primary transition-colors">Why we stand out</a></li>
+                    <li><a href="#FAQs" class="text-gray-300 hover:text-primary transition-colors">FAQs</a></li>
+                    <li><a href="https://calendly.com/fj544/sales-kick-off" target="_blank" class="text-gray-300 hover:text-primary transition-colors">Book demo</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact & Social Media -->
+            <div>
+                <h4 class="font-semibold mb-4 text-gray-300">Contact</h4>
+                <ul class="space-y-2 mb-4">
+                  <li class="text-gray-300"><a href="mailto:levy@titanaiagents.com" class="hover:text-primary transition-colors">levy@titanaiagents.com</a></li>
+                </ul>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/company/titan-ai-agent/?viewAsMember=true" class="text-gray-300 hover:text-primary transition-colors" target="_blank">
+                        <i class="ri-linkedin-fill text-xl"></i>
+                    </a>
+                    <!-- Add more social media icons here if needed -->
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-300">&copy; 2025 All rights reserved.</p>
+            <!-- Social media icons were moved to Column 3 -->
+
+        </div>
+    </div>
+</footer>
+
+
 </body>
 </html>
