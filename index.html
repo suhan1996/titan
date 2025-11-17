@@ -38,6 +38,10 @@ DEFAULT: '8px',
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/fav.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/fav.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/fav.png">
 <style>
 /* 这里移除了 :where([class^="ri-"])::before { content: "\f3c2"; } 因为它会覆盖所有Remixicon图标的默认内容 */
 h1, h2, h3, h4 { font-family: 'Arial', serif; }
@@ -141,7 +145,7 @@ body { font-family: 'Arial', sans-serif; }
                   <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div class="flex items-center justify-center bg-white rounded-xl shadow-lg h-24 w-full relative overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl group">
               <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <img src="https://interphoto.com.cn/Public/Uploads/uploadfile2/images/20210620/weibiaoti-5-02-329.jpg" alt="Logo 1" class="h-20 w-20 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 filter-none" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP Logo" class="h-20 w-20 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 filter-none" />
             </div>
             <div class="flex items-center justify-center bg-white rounded-xl shadow-lg h-24 w-full relative overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl group">
               <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -157,6 +161,18 @@ body { font-family: 'Arial', sans-serif; }
     </div>
   </div>
 
+</section>
+
+<section id="product-video" class="py-12 md:py-20 bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-xl shadow-xl border border-gray-200">
+      <video controls preload="metadata" playsinline class="w-full h-auto">
+        <source src="Video.mp4" type="video/mp4">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 </section>
 
 <section id="who-we-are-building-for" class="py-12 md:py-20 bg-secondary text-gray-100">
@@ -336,7 +352,7 @@ body { font-family: 'Arial', sans-serif; }
   </div>
 </section>
 
-<section id="Problems we solved" class="py-16 bg-secondary">
+<section id="problems-we-solved" class="py-16 bg-secondary">
   <h2 class="text-4xl font-extrabold text-center text-gray-100 mb-12">Problems We Solved</h2>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -541,7 +557,7 @@ body { font-family: 'Arial', sans-serif; }
                     <!-- Top Right: Dynamic pricing AI agent for Mass Market -->
                     <div class="flex flex-col items-center justify-center p-2 md:p-4 border-b-2 border-gray-300 bg-blue-50">
                         <h4 class="text-sm md:text-lg lg:text-xl font-bold text-gray-900 mb-2 md:mb-4 text-center">Dynamic pricing AI agent for Mass Market</h4>
-                        <img src="https://i.imgur.com/P9pLds8.pngg" alt="Titan AI Logo" class="h-8 md:h-10 lg:h-12 object-contain">
+                        <img src="https://i.imgur.com/P9pLds8.png" alt="Titan AI Logo" class="h-8 md:h-10 lg:h-12 object-contain">
                     </div>
 
                     <!-- Bottom Left: Pricing Advisory -->
@@ -789,26 +805,7 @@ body { font-family: 'Arial', sans-serif; }
 
 
 
-<script>
-  function toggleContent(id) {
-      const contentDiv = document.getElementById(`content-${id}`);
-      if (contentDiv) {
-          if (contentDiv.classList.contains('hidden')) {
-              // Show the content
-              contentDiv.classList.remove('hidden', 'opacity-0');
-              contentDiv.classList.add('opacity-100');
-          } else {
-              // Hide the content
-              contentDiv.classList.remove('opacity-100');
-              contentDiv.classList.add('opacity-0');
-              // Use a timeout to hide 'hidden' class after transition completes
-              setTimeout(() => {
-                  contentDiv.classList.add('hidden');
-              }, 300); // Must match the transition duration
-          }
-      }
-  }
-</script>
+ 
 
   </div>
   </div>
@@ -1220,7 +1217,7 @@ body { font-family: 'Arial', sans-serif; }
                 <ul class="space-y-2">
                   <li><a href="#who-we-are-building-for" class="text-gray-300 hover:text-primary transition-colors">Customer persona</a></li>
                     <li><a href="#product-features" class="text-gray-300 hover:text-primary transition-colors">Product features</a></li>
-                    <li><a href="#Problems we solved" class="text-gray-300 hover:text-primary transition-colors">Problems we solved</a></li>
+                    <li><a href="#problems-we-solved" class="text-gray-300 hover:text-primary transition-colors">Problems we solved</a></li>
                     <li><a href="#Our-solution" class="text-gray-300 hover:text-primary transition-colors">Titan AI solution</a></li>
                     <li><a href="#why-we-stand-out" class="text-gray-300 hover:text-primary transition-colors">Why we stand out</a></li>
                     <li><a href="https://calendly.com/titan-ai/levy" target="_blank" class="text-gray-300 hover:text-primary transition-colors">Book demo</a></li>
@@ -1243,7 +1240,8 @@ body { font-family: 'Arial', sans-serif; }
         </div>
 
         <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-300">&copy; 2025 All rights reserved.</p>
+            <p class="text-gray-300">&copy; 2025 Privoce, Inc. All rights reserved.</p>
+            <p class="text-gray-300">Titan AI is a product by Privoce, Inc.</p>
             <!-- Social media icons were moved to Column 3 -->
 
         </div>
